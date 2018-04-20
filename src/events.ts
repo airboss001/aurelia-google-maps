@@ -10,8 +10,13 @@ export class Events {
     static MARKERMOUSEOVER = 'marker-mouse-over';
     static MARKERMOUSEOUT = 'marker-mouse-out';
 
+    static POLYGON = 'polygon';
     static POLYGONCLICK = 'polygon-click';
     static POLYGONRENDERED = 'polygon-render';
+
+    static POLYLINE = 'polyline';
+    static POLYLINECLICK = 'polyline-click';
+    static POLYLINERENDERED = 'polyline-render';
 
     static INFOWINDOWSHOW = 'info-window-show';
     static INFOWINDOWCLOSE = 'info-window-close';

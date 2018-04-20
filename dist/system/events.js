@@ -15,8 +15,12 @@ System.register([], function (exports_1, context_1) {
                 Events.MARKERCLICK = 'marker-click';
                 Events.MARKERMOUSEOVER = 'marker-mouse-over';
                 Events.MARKERMOUSEOUT = 'marker-mouse-out';
+                Events.POLYGON = 'polygon';
                 Events.POLYGONCLICK = 'polygon-click';
                 Events.POLYGONRENDERED = 'polygon-render';
+                Events.POLYLINE = 'polyline';
+                Events.POLYLINECLICK = 'polyline-click';
+                Events.POLYLINERENDERED = 'polyline-render';
                 Events.INFOWINDOWSHOW = 'info-window-show';
                 Events.INFOWINDOWCLOSE = 'info-window-close';
                 Events.START_MARKER_HIGHLIGHT = 'start-marker-highlight';

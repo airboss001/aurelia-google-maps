@@ -3,6 +3,7 @@ import { BindingEngine } from 'aurelia-binding';
 import { Configure } from './configure';
 import { GoogleMapsAPI } from './google-maps-api';
 import { MarkerClustering } from './marker-clustering';
+import { Events } from './events';
 export interface Marker {
     icon?: string;
     label?: string;
@@ -39,6 +40,7 @@ export declare class GoogleMaps {
     drawEnabled: boolean;
     drawMode: string;
     polygons: any;
+    polylines: any;
     drawingControl: true;
     drawingControlOptions: {};
     map: any;
@@ -48,8 +50,8 @@ export declare class GoogleMaps {
     _mapPromise: Promise<any> | any;
     _mapResolve: Promise<any> | any;
     drawingManager: any;
-    _renderedPolygons: any;
-    _polygonsSubscription: any;
+    private configRenderPolygons;
+    private configRenderPolylines;
     constructor(element: Element, taskQueue: TaskQueue, config: Configure, bindingEngine: BindingEngine, googleMapsApi: GoogleMapsAPI, markerClustering: MarkerClustering);
     clearMarkers(): void;
     attached(): void;
@@ -74,7 +76,9 @@ export declare class GoogleMaps {
     drawModeChanged(newval?: any): void;
     encodePath(path?: any): any;
     decodePath(polyline: string): any;
-    renderPolygon(polygonObject?: any): void;
     polygonsChanged(newValue: any): void;
-    polygonCollectionChange(splices: any): void;
+    polylinesChanged(newValue: any): void;
+    polyChanged(newValue: any, type: Events): void;
+    collectionChange(splices: any, config: any): void;
+    renderPoly(polyObject: any, config: any): void;
 }
